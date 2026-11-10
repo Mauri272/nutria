@@ -1,0 +1,23 @@
+{
+  "//": "Chequeo estricto del núcleo (domain, db, services, tests) sin depender de Expo/React Native. El tsconfig.json de la app (extends expo/tsconfig.base) lo genera create-expo-app; agrégale estos mismos flags de strictness.",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "types": ["node"]
+  },
+  "include": ["src/domain", "src/db", "src/services", "src/config", "scripts", "tests"]
+}

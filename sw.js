@@ -1,5 +1,5 @@
 /* Service worker: la app funciona sin conexión (cache del shell). Las consultas a Open Food Facts nunca se cachean aquí. */
-const CACHE = 'nutriapp-mwaqw9yx';
+const CACHE = 'nutriapp-__BUILD__';
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', (e) => {
